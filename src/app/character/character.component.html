@@ -1,0 +1,29 @@
+<div class="container" *ngIf="currentCharacter">
+  <div class="row">
+    <div class="col-xs-6 col-lg-12">
+      <ul class="list-group aln">
+        <h1 id="info">CHARACTER INFORMATION</h1>
+        <li class="list-group-item list-group-item-primary">
+          Name: {{currentCharacter.name?currentCharacter.name:'Not Available'}}</li>
+        <li class="list-group-item list-group-item-secondary"> Gender: {{currentCharacter.gender}} </li>
+        <li class="list-group-item list-group-item-success">Born: {{currentCharacter.culture?currentCharacter.culture:'Not Available'}}</li>
+        <li class="list-group-item list-group-item-danger">
+          <p *ngIf="currentCharacter.aliases.length>0">Aliases :
+            <span *ngFor="let aliase of currentCharacter.aliases;let first=first;let last=last">{{aliase}}{{last ? '' : ', '}}</span>
+          </p>
+        </li>
+        <li class="list-group-item list-group-item-warning">
+          <p *ngIf="currentCharacter.playedBy.length>0" class="book">Played:
+            <span *ngFor="let play of currentCharacter.playedBy;let first=first;let last=last">{{play?play:'Not Available'}}{{last ? '' : ', '}}</span>
+          </p>
+        </li>
+        <li class="list-group-item list-group-item-dark">
+          <p *ngIf="currentCharacter.tvSeries.length>0" class="book">TV Series:
+            <span *ngFor="let tv of currentCharacter.tvSeries;let first=first;let last=last">{{tv?tv:'Not Available'}}{{last ? '' : ', '}}</span>
+          </p>
+        </li>
+      </ul>
+      <a class="btn btn-warning btninfo" (click)="goBackToPreviousPage()">Go Back </a>
+    </div>
+  </div>
+</div>

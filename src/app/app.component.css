@@ -1,0 +1,14 @@
+:root{
+  font-size: 16px;
+}
+.first{
+  background-color:  #690300;
+}
+.got{
+  color: bisque;
+  text-align: center;
+  text-shadow: 5px 5px #ff0000
+}
+form{
+  justify-content: center;
+}

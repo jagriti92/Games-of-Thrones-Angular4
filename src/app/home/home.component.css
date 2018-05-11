@@ -1,0 +1,46 @@
+:root{
+  font-size: 16px;
+}
+.mrgn{
+  margin-top: 2rem;
+}
+.ftr1{
+  background-color: rgb(231, 141, 105);
+}
+.hdr1{
+  color: wheat;;
+}
+.ftrclr1{
+  background-color: wheat;
+  color: brown;
+}
+.ftr2{
+  background-color: indianred;
+}
+.hdr2{
+  color: snow;;
+}
+.ftrclr2{
+  background-color: snow;
+  color: indianred;
+}
+.ftr3{
+  background-color: salmon;
+}
+.hdr3{
+  color: mistyrose;
+}
+.ftrclr3{
+  background-color: mistyrose;
+  color: salmon;
+}
+input[type=search] {
+  width: 100%;
+  font-size: 1rem;
+  background-color: #FFFAF0;
+  border-color: #f4a688;
+  border-style: dashed;
+  text-align: center;
+font-family: cursive;
+font-weight: 600;
+}

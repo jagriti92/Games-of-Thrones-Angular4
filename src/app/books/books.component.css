@@ -1,0 +1,24 @@
+:root{
+  text-align: 16px;
+}
+.aln{
+  text-align: center;
+}
+#info{
+  color: white;
+  text-shadow: 3px 3px purple;
+  letter-spacing: .3rem;
+}
+.btninfo{
+  margin-top: 2rem;
+  color:wheat;
+  background-color:palevioletred;
+  
+  margin-left: 40%;
+  box-shadow:3px 3px purple;
+}
+@media screen and (min-width:700px) and (max-width:1700px){
+  .btninfo{
+    margin-left: 48%;
+  }
+}

@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <form class="form-inline">
+    <input class="form-control" type="search" [(ngModel)]="search" [ngModelOptions]="{standalone: true}" placeholder="Search">
+  </form>
+  <div class="row" *ngIf="allData.length>0">
+    <div class="col-md-6" *ngFor="let data of allData | filter:search | sort">
+      <div class="card text-center mrgn" *ngIf="data.gender">
+        <div class="card-header ftr1">
+          <h1 class="hdr1">Character Card</h1>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{data.name?data.name:data.aliases[0] | uppercase}}</h5>
+          <p>{{data.url}}</p>
+        </div>
+        <div class="card-footer text-muted ftr1">
+          <a [routerLink]="['/character',getItemId(data)]" class="btn btn-primary ftrclr1">Read More</a>
+        </div>
+      </div>
+
+      <div class="card text-center mrgn" *ngIf="data.isbn">
+        <div class="card-header ftr2">
+          <h1 class="hdr2">Book Card</h1>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{data.name?data.name:data.aliases[0] | uppercase}}</h5>
+          <p>{{data.url}}</p>
+        </div>
+        <div class="card-footer text-muted ftr2">
+          <a [routerLink]="['/book',getItemId(data)]" class="btn btn-primary ftrclr2">Read More</a>
+        </div>
+      </div>
+
+      <div class="card text-center mrgn" *ngIf="data.region || data.coatOfArms">
+        <div class="card-header ftr3">
+          <h1 class="hdr3">House Card</h1>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{data.name?data.name:data.aliases[0] | uppercase}}</h5>
+          <p>{{data.url}}</p>
+        </div>
+        <div class="card-footer text-muted ftr3">
+          <a [routerLink]="['/house',getItemId(data)]" class="btn btn-primary ftrclr3">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
